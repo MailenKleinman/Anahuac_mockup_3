@@ -832,8 +832,8 @@ input:checked + section.boxacordion .box-title:before {
   .sidenav a {font-size: 18px;}
 }
 
-.comforta {
-  font-family: 'Comfortaa', cursive;
+.comfortaa {
+  font-family: 'Comfortaa';
 }
 
 /* The side navigation menu */
