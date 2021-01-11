@@ -519,9 +519,9 @@ iframe {
 
 
 #slider {
-  position: relative;
+  position: fixed;
   overflow: hidden;
-  margin: 20px auto 0 auto;
+  margin: 0 px auto 0 auto;
   border-radius: 4px;
 }
 
@@ -540,6 +540,7 @@ iframe {
   margin: 0;
   padding: 0;
   width: 650px;
+  height: 600px;
   background: rgba(204, 204, 204, 0);
   text-align: center;
   line-height: 300px;
@@ -831,7 +832,7 @@ input:checked + section.boxacordion .box-title:before {
   .sidenav a {font-size: 18px;}
 }
 
-comforta {
+.comforta {
   font-family: 'Comfortaa', cursive;
 }
 
