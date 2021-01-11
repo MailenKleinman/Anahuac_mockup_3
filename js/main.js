@@ -147,3 +147,115 @@ jQuery(document).ready(function ($) {
 	var accordion = new Accordion($('#accordion'), false);
 });
 
+$('.tabbar ul li a').on('click', function(e) {
+
+    e.preventDefault();
+
+    let that = $(this),
+        li = that.parent(),
+        ul = li.parent(),
+        div = ul.parent();
+
+    ul.children('li').removeClass('active');
+
+    li.addClass('active');
+
+    if(li.index() == 0) {
+        div.css({
+            '--r': '-4deg',
+            '--x': '16px'
+        });
+    } else if(li.index() == 2) {
+        div.css({
+            '--r': '4deg',
+            '--x': '-16px'
+        });
+    } else {
+        div.css({
+            '--r': '0deg',
+            '--x': '0px'
+        });
+    }
+
+});
+
+$('.without-caption').magnificPopup({
+    type: 'image',
+    closeOnContentClick: true,
+    closeBtnInside: false,
+    mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+    image: {
+        verticalFit: true
+    },
+    zoom: {
+        enabled: true,
+        duration: 300 // don't foget to change the duration also in CSS
+    }
+});
+
+$('.with-caption').magnificPopup({
+    type: 'image',
+    closeOnContentClick: true,
+    closeBtnInside: false,
+    mainClass: 'mfp-with-zoom mfp-img-mobile',
+    image: {
+        verticalFit: true,
+        titleSrc: function(item) {
+            return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+        }
+    },
+    zoom: {
+        enabled: true
+    }
+});
+
+/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+function openNav() {
+    document.getElementById("mySidenav").style.width = "390px";
+    document.getElementById("main").style.marginLeft = "390px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
+  
+  /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+    document.body.style.backgroundColor = "white";
+  }
+
+  function openNav1() {
+    document.getElementById("mySidenav1").style.width = "790px";
+    document.getElementById("main").style.marginLeft = "790px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
+  
+  /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+  function closeNav1() {
+    document.getElementById("mySidenav1").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+    document.body.style.backgroundColor = "white";
+  }
+
+  function openNav2() {
+    document.getElementById("mySidenav2").style.width = "790px";
+    document.getElementById("main").style.marginLeft = "790px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+  }
+  
+  /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+  function closeNav2() {
+    document.getElementById("mySidenav2").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+    document.body.style.backgroundColor = "white";
+  }
+
+  function myFunction() {
+    document.getElementById("myP").style.visibility = "hidden";
+    
+  }
+  function myFunction2() {
+    document.getElementById("myP").style.visibility="visible";
+    
+  }
+
+
