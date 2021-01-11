@@ -1,925 +1,920 @@
-
-
-
-
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
 
 @font-face {
-  font-family: Poppins-Regular;
-  src: url('../fonts/poppins/Poppins-Regular.ttf'); 
-}
-
-@font-face {
-  font-family: Poppins-Medium;
-  src: url('../fonts/poppins/Poppins-Medium.ttf'); 
-}
-
-@font-face {
-  font-family: Poppins-Bold;
-  src: url('../fonts/poppins/Poppins-Bold.ttf'); 
-}
-
-@font-face {
-  font-family: Poppins-SemiBold;
-  src: url('../fonts/poppins/Poppins-SemiBold.ttf'); 
-}
-
-
-
-
-/*//////////////////////////////////////////////////////////////////
-[ RESTYLE TAG ]*/
-
-* {
-	margin: 0px; 
-	padding: 0px; 
-	box-sizing: border-box;
-}
-
-body, html {
-	height: 100%;
-	font-family: Poppins-Regular, sans-serif;
-}
-
-/*---------------------------------------------*/
-a {
-	font-family: Poppins-Regular;
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 0px;
-	transition: all 0.4s;
-	-webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-}
-
-a:focus {
-	outline: none !important;
-}
-
-a:hover {
-	text-decoration: none;
-  color: #333333;
-}
-
-/*---------------------------------------------*/
-h1,h2,h3,h4,h5,h6 {
-	margin: 0px;
-}
-
-p {
-	font-family: Poppins-Regular;
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 0px;
-}
-
-ul, li {
-	margin: 0px;
-	list-style-type: none;
-}
-
-
-/*---------------------------------------------*/
-input {
+	font-family: Comfortaa;
+	src: url('../fonts/poppins/Comfortaa.ttf'); 
+  }
+  
+  @font-face {
+	font-family: Poppins-Medium;
+	src: url('../fonts/poppins/Poppins-Medium.ttf'); 
+  }
+  
+  @font-face {
+	font-family: Poppins-Bold;
+	src: url('../fonts/poppins/Poppins-Bold.ttf'); 
+  }
+  
+  @font-face {
+	font-family: Poppins-SemiBold;
+	src: url('../fonts/poppins/Poppins-SemiBold.ttf'); 
+  }
+  
+  
+  
+  
+  /*//////////////////////////////////////////////////////////////////
+  [ RESTYLE TAG ]*/
+  
+  * {
+	  margin: 0px; 
+	  padding: 0px; 
+	  box-sizing: border-box;
+  }
+  
+  body, html {
+	  height: 100%;
+	  font-family: Comfortaa, sans-serif;
+  }
+  
+  /*---------------------------------------------*/
+  a {
+	  font-family: Comfortaa;
+	  font-size: 14px;
+	  line-height: 1.7;
+	  color: #666666;
+	  margin: 0px;
+	  transition: all 0.4s;
+	  -webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+  }
+  
+  a:focus {
+	  outline: none !important;
+  }
+  
+  a:hover {
+	  text-decoration: none;
+	color: #333333;
+  }
+  
+  /*---------------------------------------------*/
+  h1,h2,h3,h4,h5,h6 {
+	  margin: 0px;
+  }
+  
+  p {
+	  font-family: Comfortaa;
+	  font-size: 14px;
+	  line-height: 1.7;
+	  color: #666666;
+	  margin: 0px;
+  }
+  
+  ul, li {
+	  margin: 0px;
+	  list-style-type: none;
+  }
+  
+  
+  /*---------------------------------------------*/
+  input {
+	  outline: none;
+	  border: none;
+  }
+  
+  textarea {
 	outline: none;
 	border: none;
-}
-
-textarea {
-  outline: none;
-  border: none;
-}
-
-textarea:focus, input:focus {
-  border-color: transparent !important;
-}
-
-input:focus::-webkit-input-placeholder { color:transparent; }
-input:focus:-moz-placeholder { color:transparent; }
-input:focus::-moz-placeholder { color:transparent; }
-input:focus:-ms-input-placeholder { color:transparent; }
-
-textarea:focus::-webkit-input-placeholder { color:transparent; }
-textarea:focus:-moz-placeholder { color:transparent; }
-textarea:focus::-moz-placeholder { color:transparent; }
-textarea:focus:-ms-input-placeholder { color:transparent; }
-
-input::-webkit-input-placeholder { color: #adadad;}
-input:-moz-placeholder { color: #adadad;}
-input::-moz-placeholder { color: #adadad;}
-input:-ms-input-placeholder { color: #adadad;}
-
-textarea::-webkit-input-placeholder { color: #adadad;}
-textarea:-moz-placeholder { color: #adadad;}
-textarea::-moz-placeholder { color: #adadad;}
-textarea:-ms-input-placeholder { color: #adadad;}
-
-/*---------------------------------------------*/
-button {
-	outline: none !important;
-	border: none;
-	background: transparent;
-}
-
-button:hover {
-	cursor: pointer;
-}
-
-iframe {
-	border: none !important;
-}
-
-
-/*//////////////////////////////////////////////////////////////////
-[ Utility ]*/
-.txt1 {
-  font-family: Poppins-Regular;
-  font-size: 15px;
-  color: #686868;
-  line-height: 1.5;
-}
-
-.txt2 {
-  font-family: Poppins-Regular;
-  font-size: 15px;
-  color: #f15a22;
-  line-height: 1.5;
-}
-
-/*//////////////////////////////////////////////////////////////////
-[ login ]*/
-
-.limiter {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.container-login100 {
-  width: 100%;  
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
-  background: #fff;  
-}
-
-.wrap-login100 {
-  width: 390px;
-  background: #fff;
-}
-
-
-/*------------------------------------------------------------------
-[ Form ]*/
-
-.login100-form {
-  width: 100%;
-}
-
-.login100-form-title {
-  display: block;
-  font-family: Poppins-Bold;
-  font-size: 39px;
-  color: #333333;
-  line-height: 1.2;
-  text-align: center;
-}
-
-.login100-form-avatar {
-  display: block;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 0 auto;
-}
-
-.login100-form-avatar img {
-  width: 100%;
-}
-
-/*------------------------------------------------------------------
-[ Input ]*/
-
-.wrap-input100 {
-  width: 100%;
-  position: relative;
-  border-bottom: 2px solid #ffffff;
-}
-
-.input100 {
-  font-family: Poppins-SemiBold;
-  font-size: 18px;
-  color: #555555;
-  line-height: 1.2;
-
-  display: block;
-  width: 100%;
-  height: 52px;
-  background: transparent;
-  padding: 0 5px;
-}
-
-/*---------------------------------------------*/ 
-.focus-input100 {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-}
-
-.focus-input100::before {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-
-  background: #f15a22;
-}
-
-.focus-input100::after {
-  font-family: Comfortaa;
-  font-size: 18px;
-  color: #999999;
-  line-height: 1.2;
-  font-weight: 600;
-
-  content: attr(data-placeholder);
-  display: block;
-  width: 100%;
-  position: absolute;
-  top: 15px;
-  left: 0px;
-  padding-left: 5px;
-
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.input100:focus + .focus-input100::after {
-  top: -20px;
-  font-size: 15px;
-}
-
-.input100:focus + .focus-input100::before {
-  width: 100%;
-}
-
-.has-val.input100 + .focus-input100::after {
-  top: -20px;
-  font-size: 15px;
-}
-
-.has-val.input100 + .focus-input100::before {
-  width: 100%;
-}
-
-
-/*------------------------------------------------------------------
-[ Button ]*/
-.container-login100-form-btn {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.login100-form-btn {
-  font-family: Poppins-Medium;
-  font-size: 16px;
-  color: #fff;
-  line-height: 1.2;
-  text-transform: uppercase;
-
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 20px;
-  width: 100%;
-  height: 50px;
-  background-color: #f15a22;
-  border-radius: 5px;
-
-  box-shadow: 0 10px 30px 0px rgba(184, 106, 70, 0.5);
-  -moz-box-shadow: 0 10px 30px 0px rgba(184, 106, 70, 0.5);
-  -webkit-box-shadow: 0 10px 30px 0px rgba(184, 106, 70, 0.5);
-  -o-box-shadow: 0 10px 30px 0px rgba(184, 106, 70, 0.5);
-  -ms-box-shadow: 0 10px 30px 0px rgba(184, 106, 70, 0.5);;
-
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.login100-form-btn:hover  {
-  background-color: #ac4018;
-  box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
-  -moz-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
-  -webkit-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
-  -o-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
-  -ms-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
-}
-
-
-
-/*------------------------------------------------------------------
-[ Alert validate ]*/
-
-.validate-input {
-  position: relative;
-}
-
-.alert-validate::before {
-  content: attr(data-validate);
-  position: absolute;
-  max-width: 70%;
-  background-color: #fff;
-  border: 1px solid #c80000;
-  border-radius: 2px;
-  padding: 4px 25px 4px 10px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  right: 0px;
-  pointer-events: none;
-
-  font-family: Poppins-Regular;
-  color: #c80000;
-  font-size: 13px;
-  line-height: 1.4;
-  text-align: left;
-
-  visibility: hidden;
-  opacity: 0;
-
-  -webkit-transition: opacity 0.4s;
-  -o-transition: opacity 0.4s;
-  -moz-transition: opacity 0.4s;
-  transition: opacity 0.4s;
-}
-
-.alert-validate::after {
-  content: "\f06a";
-  font-family: FontAwesome;
-  font-size: 16px;
-  color: #c80000;
-
-  display: block;
-  position: absolute;
-  background-color: #fff;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  right: 5px;
-}
-
-.alert-validate:hover:before {
-  visibility: visible;
-  opacity: 1;
-}
-
-@media (max-width: 992px) {
-  .alert-validate::before {
-    visibility: visible;
-    opacity: 1;
   }
-}
-
-
-/*//////////////////////////////////////////////////////////////////
-[ Login more ]*/
-.login-more li {
-  position: relative;
-  padding-left: 16px;
-}
-
-.login-more li::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: #cccccc;
-  top: 45%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  left: 0;
-}
-
-.montserrat {
-  font-family: Montserrat;
-  color: white;
-}
-
-/* Style the video: 100% width and height to cover the entire window */
-#myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-}
-
-/* Add some content at the bottom of the video/page */
-.content {
-  position: fixed;
-  bottom: 0;
-  background:linear-gradient(top, rgba(60, 5, 85, rgba(150, 69, 3, 0.747) 69, 3));
-  background:-webkit-linear-gradient(top,rgba(60, 5, 85, 0.788),  rgba(150, 69, 3, 0.726));
-  background:-moz-linear-gradient(top,rgba(60, 5, 85, 0rgba(150, 69, 3, 0.726), 69, 3));
-  background:-o-linear-gradient(top rgba(60, 5, 85, 0.76),  rgba(150, 69, 3, 0.747));
-  background:-ms-linear-gradient(top, rgba(60, 5, 85, 0rgba(150, 69, 3, 0.808), 69, 3));
-  color: #ffffff;
-  width: 50%;
-  padding: 50px;
-}
-
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translate3d(-100%, 0, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-.fadeInLeft {
-  animation-name: fadeInLeft;
-}
-.container {
-	position: absolute;
-	top: 0%;
-	left: 10%;
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-
-.backgroundcolor {
-  background-color: #cccccc;
   
-
-	
-  /* Set up proportionate scaling */
-  width: 100%;
-  height: auto;
-	
-  /* Set up positioning */
-  position: fixed;
-  top: 0;
-  left: 0;
-	;
-}
-
-
-
-#slider {
-  position: fixed;
-  overflow: hidden;
-  margin: 0px auto 0 auto;
-  border-radius: 4px;
-}
-
-#slider ul {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  height: 200px;
-  list-style: none;
-}
-
-#slider ul li {
-  position: relative;
-  display: block;
-  float: left;
-  margin: 0;
-  padding: 0;
-  width: 650px;
-  height: 600px;
-  background: rgba(204, 204, 204, 0);
-  text-align: center;
-  line-height: 300px;
-}
-
-a.control_prev, a.control_next {
-  position: absolute;
-  top: 40%;
-  z-index: 999;
-  display: block;
-  padding: 4% 3%;
-  width: auto;
-  height: auto;
-  background: #2a2a2a00;
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 18px;
-  opacity: 0.8;
-  cursor: pointer;
-}
-
-a.control_prev:hover, a.control_next:hover {
-  opacity: 1;
-  -webkit-transition: all 0.2s ease;
-}
-
-a.control_prev {
-  border-radius: 0 2px 2px 0;
-}
-
-a.control_next {
-  right: 0;
-  border-radius: 2px 0 0 2px;
-}
-
-.slider_option {
-  position: relative;
-  margin: 10px auto;
-  width: 160px;
-  font-size: 18px;
-}
-
-
-
-.box {
-  width: 100%;
-  top:0;
-  left: 0;
-  background: rgba(255,255,255,0.2);
-  padding: 15px;
-  background-clip: padding-box;
-  text-align: center;
-  box-shadow: rgba(0, 0, 0, 0.445);
-}
-
-.button {
-  font-size: 1em;
-  padding: 10px;
-  color: #fff;
-  border: 2px solid rgb(255, 255, 255);
-  border-radius: 30px/30px;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease-out;
-}
-.button:hover {
-  background: rgb(255, 143, 15);
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0);
-  transition: opacity 500ms;
-  visibility: hidden;
-  opacity: 0;
-}
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
-
-.popup {
-  margin:0;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0);
-  border-radius: 5px;
-  width: 280px;
-  position: absolute;
-  left: 100px;
-  bottom: 15px;
-  transition: all 5s ease-in-out;
+  textarea:focus, input:focus {
+	border-color: transparent !important;
+  }
   
-}
-
-
-.popup .close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  transition: all 200ms;
-  font-size: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-}
-.popup .close:hover {
-  color: rgb(255, 255, 255);
-}
-.popup .content {
-  max-height: 30%;
-  overflow: auto;
-}
-
-
-
-#bgfull {
+  input:focus::-webkit-input-placeholder { color:transparent; }
+  input:focus:-moz-placeholder { color:transparent; }
+  input:focus::-moz-placeholder { color:transparent; }
+  input:focus:-ms-input-placeholder { color:transparent; }
+  
+  textarea:focus::-webkit-input-placeholder { color:transparent; }
+  textarea:focus:-moz-placeholder { color:transparent; }
+  textarea:focus::-moz-placeholder { color:transparent; }
+  textarea:focus:-ms-input-placeholder { color:transparent; }
+  
+  input::-webkit-input-placeholder { color: #adadad;}
+  input:-moz-placeholder { color: #adadad;}
+  input::-moz-placeholder { color: #adadad;}
+  input:-ms-input-placeholder { color: #adadad;}
+  
+  textarea::-webkit-input-placeholder { color: #adadad;}
+  textarea:-moz-placeholder { color: #adadad;}
+  textarea::-moz-placeholder { color: #adadad;}
+  textarea:-ms-input-placeholder { color: #adadad;}
+  
+  /*---------------------------------------------*/
+  button {
+	  outline: none !important;
+	  border: none;
+	  background: transparent;
+  }
+  
+  button:hover {
+	  cursor: pointer;
+  }
+  
+  iframe {
+	  border: none !important;
+  }
+  
+  
+  /*//////////////////////////////////////////////////////////////////
+  [ Utility ]*/
+  .txt1 {
+	font-family: Comfortaa;
+	font-size: 15px;
+	color: #686868;
+	line-height: 1.5;
+  }
+  
+  .txt2 {
+	font-family: Comfortaa;
+	font-size: 15px;
+	color: #f15a22;
+	line-height: 1.5;
+  }
+  
+  /*//////////////////////////////////////////////////////////////////
+  [ login ]*/
+  
+  .limiter {
+	width: 100%;
+	margin: 0 auto;
+  }
+  
+  .container-login100 {
 	width: 100%;  
 	min-height: 100vh;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	position: relative;
-	z-index: 1;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	background: #fff;  
   }
   
-
-  .degrade {
-	background:linear-gradient(top, rgb(59, 5, 85), rgb(150, 69, 3));
-	background:-webkit-linear-gradient(top,rgb(59, 5, 85),  rgb(150, 69, 3));
-	background:-moz-linear-gradient(top,rgb(59, 5, 85),  rgb(150, 69, 3));
-	background:-o-linear-gradient(top rgb(59, 5, 85),  rgb(150, 69, 3));
-	background:-ms-linear-gradient(top, rgb(59, 5, 85),  rgb(150, 69, 3));
+  .wrap-login100 {
+	width: 390px;
+	background: #fff;
   }
-
-  .degradetrans {
-	background:linear-gradient(top,  rgba(60, 5, 85, 0.616),  rgba(150, 69, 3, 0.685));
-	background:-webkit-linear-gradient(top, rgba(60, 5, 85, 0.616),  rgba(150, 69, 3, 0.685));
-	background:-moz-linear-gradient(top, rgba(60, 5, 85, 0.616),  rgba(150, 69, 3, 0.685));
-	background:-o-linear-gradient(top,  rgba(60, 5, 85, 0.616),  rgba(150, 69, 3, 0.685));
-	background:-ms-linear-gradient(top, rgba(60, 5, 85, 0.616),  rgba(150, 69, 3, 0.685));
-  }
- 
-.accordion {
-	margin: auto;
-	width: 400px;
-}
-.accordion input {
-	display: none;
-}
-.boxacordion {
-	position: relative;
-	background: white;
-    height: 64px;
-    transition: all .15s ease-in-out;
-}
-.boxacordion::before {
-    content: '';
-    position: absolute;
-    display: block;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    pointer-events: none;
-    box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
-}
-header.boxacordion {
-	background: #00BCD4;
-	z-index: 100;
-	cursor: initial;
-	box-shadow: 0 -1px 0 #e5e5e5,0 0 2px -2px rgba(0,0,0,.12),0 2px 4px -4px rgba(0,0,0,.24);
-}
-header .box-title {
-	margin: 0;
-	font-weight: normal;
-	font-size: 16pt;
-	color: white;
-	cursor: initial;
-}
-.box-title {
-	width: calc(100% - 40px);
-	height: 64px;
-	line-height: 64px;
-	padding: 0 20px;
-	cursor: pointer;
-	-webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
-}
-.box-content {
-	width: calc(100% - 40px);
-	padding: 30px 20px;
-	font-size: 11pt;
-	color: rgba(0,0,0,.54);
-	display: none;
-}
-.box-close {
-	position: absolute;
-	height: 64px;
+  
+  
+  /*------------------------------------------------------------------
+  [ Form ]*/
+  
+  .login100-form {
 	width: 100%;
-	top: 0;
-	left: 0;
-	cursor: pointer;
-	display: none;
-}
-input:checked + .boxacordion {
-	height: auto;
-	margin: 16px 0;
-    box-shadow: 0 0 6px rgba(0,0,0,.16),0 6px 12px rgba(0,0,0,.32);
-}
-input:checked + .boxacordion .box-title {
-	border-bottom: 1px solid rgba(0,0,0,.18);
-}
-input:checked + .boxacordion .box-content,
-input:checked + .boxacordion .box-close {
-	display: inline-block;
-}
-.arrows section .boxacordion-title {
-	padding-left: 44px;
-	width: calc(100% - 64px);
-}
-.arrows section .boxacordion-title:before {
+  }
+  
+  .login100-form-title {
+	display: block;
+	font-family: Poppins-Bold;
+	font-size: 39px;
+	color: #333333;
+	line-height: 1.2;
+	text-align: center;
+  }
+  
+  .login100-form-avatar {
+	display: block;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 0 auto;
+  }
+  
+  .login100-form-avatar img {
+	width: 100%;
+  }
+  
+  /*------------------------------------------------------------------
+  [ Input ]*/
+  
+  .wrap-input100 {
+	width: 100%;
+	position: relative;
+	border-bottom: 2px solid #ffffff;
+  }
+  
+  .input100 {
+	font-family: Poppins-SemiBold;
+	font-size: 18px;
+	color: #555555;
+	line-height: 1.2;
+  
+	display: block;
+	width: 100%;
+	height: 52px;
+	background: transparent;
+	padding: 0 5px;
+  }
+  
+  /*---------------------------------------------*/ 
+  .focus-input100 {
 	position: absolute;
 	display: block;
-	content: '\203a';
-	font-size: 18pt;
-	left: 20px;
-	top: -2px;
-	transition: transform .15s ease-in-out;
-	color: rgba(0,0,0,.54);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+  }
+  
+  .focus-input100::before {
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	width: 0;
+	height: 2px;
+  
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	transition: all 0.4s;
+  
+	background: #f15a22;
+  }
+  
+  .focus-input100::after {
+	font-family: Comfortaa;
+	font-size: 18px;
+	color: #999999;
+	line-height: 1.2;
+	font-weight: 600;
+  
+	content: attr(data-placeholder);
+	display: block;
+	width: 100%;
+	position: absolute;
+	top: 15px;
+	left: 0px;
+	padding-left: 5px;
+  
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	transition: all 0.4s;
+  }
+  
+  .input100:focus + .focus-input100::after {
+	top: -20px;
+	font-size: 15px;
+  }
+  
+  .input100:focus + .focus-input100::before {
+	width: 100%;
+  }
+  
+  .has-val.input100 + .focus-input100::after {
+	top: -20px;
+	font-size: 15px;
+  }
+  
+  .has-val.input100 + .focus-input100::before {
+	width: 100%;
+  }
+  
+  
+  /*------------------------------------------------------------------
+  [ Button ]*/
+  .container-login100-form-btn {
+	width: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+  }
+  
+  .login100-form-btn {
+	font-family: Poppins-Medium;
+	font-size: 16px;
+	color: #fff;
+	line-height: 1.2;
+	text-transform: uppercase;
+  
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 20px;
+	width: 100%;
+	height: 50px;
+	background-color: #f15a22;
+	border-radius: 5px;
+  
+	box-shadow: 0 10px 30px 0px rgba(184, 106, 70, 0.5);
+	-moz-box-shadow: 0 10px 30px 0px rgba(184, 106, 70, 0.5);
+	-webkit-box-shadow: 0 10px 30px 0px rgba(184, 106, 70, 0.5);
+	-o-box-shadow: 0 10px 30px 0px rgba(184, 106, 70, 0.5);
+	-ms-box-shadow: 0 10px 30px 0px rgba(184, 106, 70, 0.5);;
+  
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	transition: all 0.4s;
+  }
+  
+  .login100-form-btn:hover  {
+	background-color: #ac4018;
+	box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+	-moz-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+	-webkit-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+	-o-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+	-ms-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+  }
+  
+  
+  
+  /*------------------------------------------------------------------
+  [ Alert validate ]*/
+  
+  .validate-input {
+	position: relative;
+  }
+  
+  .alert-validate::before {
+	content: attr(data-validate);
+	position: absolute;
+	max-width: 70%;
+	background-color: #fff;
+	border: 1px solid #c80000;
+	border-radius: 2px;
+	padding: 4px 25px 4px 10px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	right: 0px;
+	pointer-events: none;
+  
+	font-family: Comfortaa;
+	color: #c80000;
+	font-size: 13px;
+	line-height: 1.4;
+	text-align: left;
+  
+	visibility: hidden;
+	opacity: 0;
+  
+	-webkit-transition: opacity 0.4s;
+	-o-transition: opacity 0.4s;
+	-moz-transition: opacity 0.4s;
+	transition: opacity 0.4s;
+  }
+  
+  .alert-validate::after {
+	content: "\f06a";
+	font-family: FontAwesome;
+	font-size: 16px;
+	color: #c80000;
+  
+	display: block;
+	position: absolute;
+	background-color: #fff;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	right: 5px;
+  }
+  
+  .alert-validate:hover:before {
+	visibility: visible;
+	opacity: 1;
+  }
+  
+  @media (max-width: 992px) {
+	.alert-validate::before {
+	  visibility: visible;
+	  opacity: 1;
+	}
+  }
+  
+  
+  /*//////////////////////////////////////////////////////////////////
+  [ Login more ]*/
+  .login-more li {
+	position: relative;
+	padding-left: 16px;
+  }
+  
+  .login-more li::before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background-color: #cccccc;
+	top: 45%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: 0;
+  }
+  
+  .montserrat {
 	font-family: Montserrat;
-}
-input:checked + section.boxacordion .box-title:before {
-	transform: rotate(90deg);
-}
-
-
-
-    /* The side navigation menu */
-.sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: rgba(255, 255, 255, 0.753); /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
-
-/* The navigation menu links */
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #5f422a;
-  display: block;
-  transition: 0.3s;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f15a22;
-}
-
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: margin-left .5s;
-  padding: 0px;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-.comforta {
-  font-family: 'Comfortaa';
-}
-
-/* The side navigation menu */
-.sidenav1 {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: rgba(255, 255, 255, 0.753); /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
-
-/* The navigation menu links */
-.sidenav1 a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #5f422a;
-  display: block;
-  transition: 0.3s;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav1 a:hover {
-  color: #f15a22;
-}
-
-/* Position and style the close button (top right corner) */
-.sidenav1 .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-/* The side navigation menu */
-.sidenav2 {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: rgba(255, 255, 255, 0.753); /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-}
-
-/* The navigation menu links */
-.sidenav2 a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #5f422a;
-  display: block;
-  transition: 0.3s;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav2 a:hover {
-  color: #f15a22;
-}
-
-/* Position and style the close button (top right corner) */
-.sidenav2 .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-
-
-.zoom {
-  transition: .2s; /* Animation */
-  cursor: pointer;
+	color: white;
   }
   
-  .zoom:hover {
-  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  /* Style the video: 100% width and height to cover the entire window */
+  #myVideo {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
   }
   
+  /* Add some content at the bottom of the video/page */
+  .content {
+	position: fixed;
+	bottom: 0;
+	background:linear-gradient(top, rgba(60, 5, 85, rgba(150, 69, 3, 0.747) 69, 3));
+	background:-webkit-linear-gradient(top,rgba(60, 5, 85, 0.788),  rgba(150, 69, 3, 0.726));
+	background:-moz-linear-gradient(top,rgba(60, 5, 85, 0rgba(150, 69, 3, 0.726), 69, 3));
+	background:-o-linear-gradient(top rgba(60, 5, 85, 0.76),  rgba(150, 69, 3, 0.747));
+	background:-ms-linear-gradient(top, rgba(60, 5, 85, 0rgba(150, 69, 3, 0.808), 69, 3));
+	color: #ffffff;
+	width: 50%;
+	padding: 50px;
+  }
+  
+  @keyframes fadeInLeft {
+	from {
+	  opacity: 0;
+	  transform: translate3d(-100%, 0, 0);
+	}
+  
+	to {
+	  opacity: 1;
+	  transform: none;
+	}
+  }
+  
+  .fadeInLeft {
+	animation-name: fadeInLeft;
+  }
+  .container {
+	  position: absolute;
+	  top: 0%;
+	  left: 10%;
+	padding-left: 5%;
+	padding-right: 5%;
+  }
+  
+  
+  .backgroundcolor {
+	background-color: #cccccc;
+	
+  
+	  
+	/* Set up proportionate scaling */
+	width: 100%;
+	height: auto;
+	  
+	/* Set up positioning */
+	position: fixed;
+	top: 0;
+	left: 0;
+	  ;
+  }
+  
+  
+  
+  #slider {
+	position: fixed;
+	overflow: hidden;
+	margin: 0px auto 0 auto;
+	border-radius: 4px;
+  }
+  
+  #slider ul {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	height: 200px;
+	list-style: none;
+  }
+  
+  #slider ul li {
+	position: relative;
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 650px;
+	height: 600px;
+	background: rgba(204, 204, 204, 0);
+	text-align: center;
+	line-height: 300px;
+  }
+  
+  a.control_prev, a.control_next {
+	position: absolute;
+	top: 40%;
+	z-index: 999;
+	display: block;
+	padding: 4% 3%;
+	width: auto;
+	height: auto;
+	background: #2a2a2a00;
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 18px;
+	opacity: 0.8;
+	cursor: pointer;
+  }
+  
+  a.control_prev:hover, a.control_next:hover {
+	opacity: 1;
+	-webkit-transition: all 0.2s ease;
+  }
+  
+  a.control_prev {
+	border-radius: 0 2px 2px 0;
+  }
+  
+  a.control_next {
+	right: 0;
+	border-radius: 2px 0 0 2px;
+  }
+  
+  .slider_option {
+	position: relative;
+	margin: 10px auto;
+	width: 160px;
+	font-size: 18px;
+  }
+  
+  
+  
+  .box {
+	width: 100%;
+	top:0;
+	left: 0;
+	background: rgba(255,255,255,0.2);
+	padding: 15px;
+	background-clip: padding-box;
+	text-align: center;
+	box-shadow: rgba(0, 0, 0, 0.445);
+  }
+  
+  .button {
+	font-size: 1em;
+	padding: 10px;
+	color: #fff;
+	border: 2px solid rgb(255, 255, 255);
+	border-radius: 30px/30px;
+	text-decoration: none;
+	cursor: pointer;
+	transition: all 0.3s ease-out;
+  }
+  .button:hover {
+	background: rgb(255, 143, 15);
+  }
+  
+  .overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0);
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity: 0;
+  }
+  .overlay:target {
+	visibility: visible;
+	opacity: 1;
+  }
+  
+  .popup {
+	margin:0;
+	padding: 20px;
+	background: rgba(255, 255, 255, 0);
+	border-radius: 5px;
+	width: 280px;
+	position: absolute;
+	left: 100px;
+	bottom: 15px;
+	transition: all 5s ease-in-out;
+	
+  }
+  
+  
+  .popup .close {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+  }
+  .popup .close:hover {
+	color: rgb(255, 255, 255);
+  }
+  .popup .content {
+	max-height: 30%;
+	overflow: auto;
+  }
+  
+  
+  
+  #bgfull {
+	  width: 100%;  
+	  min-height: 100vh;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	  background-position: center;
+	  position: relative;
+	  z-index: 1;
+	}
+	
+  
+	.degrade {
+	  background:linear-gradient(top, rgb(59, 5, 85), rgb(150, 69, 3));
+	  background:-webkit-linear-gradient(top,rgb(59, 5, 85),  rgb(150, 69, 3));
+	  background:-moz-linear-gradient(top,rgb(59, 5, 85),  rgb(150, 69, 3));
+	  background:-o-linear-gradient(top rgb(59, 5, 85),  rgb(150, 69, 3));
+	  background:-ms-linear-gradient(top, rgb(59, 5, 85),  rgb(150, 69, 3));
+	}
+  
+	.degradetrans {
+	  background:linear-gradient(top,  rgba(60, 5, 85, 0.616),  rgba(150, 69, 3, 0.685));
+	  background:-webkit-linear-gradient(top, rgba(60, 5, 85, 0.616),  rgba(150, 69, 3, 0.685));
+	  background:-moz-linear-gradient(top, rgba(60, 5, 85, 0.616),  rgba(150, 69, 3, 0.685));
+	  background:-o-linear-gradient(top,  rgba(60, 5, 85, 0.616),  rgba(150, 69, 3, 0.685));
+	  background:-ms-linear-gradient(top, rgba(60, 5, 85, 0.616),  rgba(150, 69, 3, 0.685));
+	}
+   
+  .accordion {
+	  margin: auto;
+	  width: 400px;
+  }
+  .accordion input {
+	  display: none;
+  }
+  .boxacordion {
+	  position: relative;
+	  background: white;
+	  height: 64px;
+	  transition: all .15s ease-in-out;
+  }
+  .boxacordion::before {
+	  content: '';
+	  position: absolute;
+	  display: block;
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  pointer-events: none;
+	  box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
+  }
+  header.boxacordion {
+	  background: #00BCD4;
+	  z-index: 100;
+	  cursor: initial;
+	  box-shadow: 0 -1px 0 #e5e5e5,0 0 2px -2px rgba(0,0,0,.12),0 2px 4px -4px rgba(0,0,0,.24);
+  }
+  header .box-title {
+	  margin: 0;
+	  font-weight: normal;
+	  font-size: 16pt;
+	  color: white;
+	  cursor: initial;
+  }
+  .box-title {
+	  width: calc(100% - 40px);
+	  height: 64px;
+	  line-height: 64px;
+	  padding: 0 20px;
+	  cursor: pointer;
+	  -webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
+  }
+  .box-content {
+	  width: calc(100% - 40px);
+	  padding: 30px 20px;
+	  font-size: 11pt;
+	  color: rgba(0,0,0,.54);
+	  display: none;
+  }
+  .box-close {
+	  position: absolute;
+	  height: 64px;
+	  width: 100%;
+	  top: 0;
+	  left: 0;
+	  cursor: pointer;
+	  display: none;
+  }
+  input:checked + .boxacordion {
+	  height: auto;
+	  margin: 16px 0;
+	  box-shadow: 0 0 6px rgba(0,0,0,.16),0 6px 12px rgba(0,0,0,.32);
+  }
+  input:checked + .boxacordion .box-title {
+	  border-bottom: 1px solid rgba(0,0,0,.18);
+  }
+  input:checked + .boxacordion .box-content,
+  input:checked + .boxacordion .box-close {
+	  display: inline-block;
+  }
+  .arrows section .boxacordion-title {
+	  padding-left: 44px;
+	  width: calc(100% - 64px);
+  }
+  .arrows section .boxacordion-title:before {
+	  position: absolute;
+	  display: block;
+	  content: '\203a';
+	  font-size: 18pt;
+	  left: 20px;
+	  top: -2px;
+	  transition: transform .15s ease-in-out;
+	  color: rgba(0,0,0,.54);
+	  font-family: Montserrat;
+  }
+  input:checked + section.boxacordion .box-title:before {
+	  transform: rotate(90deg);
+  }
+  
+  
+  
+	  /* The side navigation menu */
+  .sidenav {
+	height: 100%; /* 100% Full-height */
+	width: 0; /* 0 width - change this with JavaScript */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Stay on top */
+	top: 0; /* Stay at the top */
+	left: 0;
+	background-color: rgba(255, 255, 255, 0.753); /* Black*/
+	overflow-x: hidden; /* Disable horizontal scroll */
+	padding-top: 60px; /* Place content 60px from the top */
+	transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #5f422a;
+	display: block;
+	transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+	color: #f15a22;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+	transition: margin-left .5s;
+	padding: 0px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+  }
+  
+  .comforta {
+	font-family: 'Comfortaa';
+  }
+  
+  /* The side navigation menu */
+  .sidenav1 {
+	height: 100%; /* 100% Full-height */
+	width: 0; /* 0 width - change this with JavaScript */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Stay on top */
+	top: 0; /* Stay at the top */
+	left: 0;
+	background-color: rgba(255, 255, 255, 0.753); /* Black*/
+	overflow-x: hidden; /* Disable horizontal scroll */
+	padding-top: 60px; /* Place content 60px from the top */
+	transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav1 a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #5f422a;
+	display: block;
+	transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav1 a:hover {
+	color: #f15a22;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav1 .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+  }
+  
+  /* The side navigation menu */
+  .sidenav2 {
+	height: 100%; /* 100% Full-height */
+	width: 0; /* 0 width - change this with JavaScript */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Stay on top */
+	top: 0; /* Stay at the top */
+	left: 0;
+	background-color: rgba(255, 255, 255, 0.753); /* Black*/
+	overflow-x: hidden; /* Disable horizontal scroll */
+	padding-top: 60px; /* Place content 60px from the top */
+	transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav2 a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #5f422a;
+	display: block;
+	transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav2 a:hover {
+	color: #f15a22;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav2 .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+  }
+  
+  
+  
+  .zoom {
+	transition: .2s; /* Animation */
+	cursor: pointer;
+	}
+	
+	.zoom:hover {
+	transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+	}
